@@ -10,6 +10,9 @@ export default defineConfig(({ mode }) => {
   const emitSourcemaps = mode === "development"
 
   return {
+    // GitHub Pages project site is served from /skinfood/.
+    // Keep the production asset prefix stable so main-page public assets
+    // resolve under https://webssami.github.io/skinfood/.
     base: "/skinfood/",
     build: {
       sourcemap: emitSourcemaps ? "inline" : false,
