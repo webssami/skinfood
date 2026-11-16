@@ -13,7 +13,9 @@ export default defineConfig(({ mode }) => {
     // GitHub Pages project site is served from /skinfood/.
     // Keep the production asset prefix stable so main-page public assets
     // resolve under https://webssami.github.io/skinfood/.
-    base: "/skinfood/",
+    base: process.env.FIGMA_PUBLIC_URL
+    ? `${process.env.FIGMA_PUBLIC_URL}/`
+    : "/skinfood/",
     build: {
       sourcemap: emitSourcemaps ? "inline" : false,
       minify: !emitSourcemaps,
