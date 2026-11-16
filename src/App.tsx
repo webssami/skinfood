@@ -18,7 +18,7 @@ import IngredientDetailPage from "@/pages/IngredientDetailPage"
 const SkinTypePage = lazy(() => import("@/pages/SkinTypePage"))
 
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, "")
-const A = `/assets`
+const A = `${BASE}/assets`
 const siteHref = (path: string) => `${BASE}${path}`
 
 interface MenuGroup {
